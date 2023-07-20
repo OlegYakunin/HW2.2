@@ -53,4 +53,27 @@ public class Slytherin extends Hogwarts{
     public void setLustForPower(int lustForPower) {
         this.lustForPower = lustForPower;
     }
+    @Override
+    public String toString() {
+        return super.toString() + " ," +
+                "cunning=" + cunning +
+                ", decisiveness=" + decisiveness +
+                ", ambition=" + ambition +
+                ", ingenuity=" + ingenuity +
+                ", lustForPower=" + lustForPower              ;
+    }
+    public void compareStudentsFaculty(Slytherin student) {
+        int skillsStudent1 = this.getCunning() + this.getDecisiveness() + this.getAmbition() + this.getIngenuity() + this.getLustForPower();
+        int skillsStudent2 = student.getCunning() + student.getDecisiveness() + student.getAmbition() + student.getIngenuity() + student.getLustForPower();
+        System.out.println(this.getName() + " = " + skillsStudent1 + " баллов");
+        System.out.println(student.getName() + " = " + skillsStudent2 + " баллов");
+        if (skillsStudent1 > skillsStudent2) {
+            System.out.println(this.getName() + " лучший слизеринец, чем " + student.getName());
+        } else if (skillsStudent1 == skillsStudent2){
+            System.out.println(this.getName() + " и " + student.getName() + " равны ");
+        } else {
+            System.out.println(student.getName() + " лучший слизеринец, чем " + this.getName());
+        }
+        System.out.println();
+    }
 }

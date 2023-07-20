@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Gryffindor garPot= new Gryffindor("Гарри Поттер",23,31,31,31,11);
+        Gryffindor garPot = new Gryffindor("Гарри Поттер",23,31,31,31,11);
         Gryffindor gerGrei = new Gryffindor("Гермиона Грейнджер", 44,3,61,51,1);
-        Gryffindor ronWis= new Gryffindor("Рон Уизли", 24,25,25,87,83);
+        Gryffindor ronWis = new Gryffindor("Рон Уизли", 24,25,25,87,83);
 
         Slytherin draMal = new Slytherin("Драко Малфой", 23,72,71,17,17,17,17);
         Slytherin greMon = new Slytherin("Грэхэм Монтегю", 72,83,82,12,36,82,2);
@@ -19,14 +19,19 @@ public class Main {
         PrintStudentDescription printStudentDescription = new PrintStudentDescription();
         printStudentDescription.print(gerGrei);
         printStudentDescription.print(marBe);
+        printStudentDescription.print(ronWis);
+        printStudentDescription.print(garPot);
 
-        CompareStudents compareStudents = new CompareStudents ();
-        compareStudents.compareStudentsGryffindor(gerGrei, ronWis);
-        compareStudents.compareStudentsSlytherin(greMon, draMal);
-        compareStudents.compareStudentsHufflepuff(sedDig, zahSmi);
-        compareStudents.compareStudentsRavenclaw(choCha, paPat);
-        compareStudents.compareStudentsAll(choCha, garPot);
-        compareStudents.compareStudentsAll(draMal, gerGrei);
+        ronWis.compareStudentsFaculty(garPot);
+        garPot.compareStudentsFaculty(garPot);
+        greMon.compareStudentsAll(garPot);
+        garPot.compareStudentsAll(gerGrei);
+        choCha.compareStudentsFaculty(paPat);
+
+
+
+
+
 
 
 
